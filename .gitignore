@@ -1,0 +1,55 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+.eggs/
+.env
+.venv
+venv/
+ENV/
+env/
+
+# ---- Node / pnpm ----
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+dist/
+.vite/
+.cache/
+coverage/
+
+# ---- Editor / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ---- OS / system files ----
+*.log
+*.tmp
+*.bak
+*.pid
+
+# ---- Docker ----
+*.pid
+*.seed
+*.pid.lock
+docker-compose.override.yml
+
+# ---- Build / packaging ----
+*.tar
+*.tar.gz
+*.zip
+*.7z
+
+# ---- AiMax specific ----
+/ui/aimax-ui/.pnpm-store/
+/ui/aimax-ui/dist/

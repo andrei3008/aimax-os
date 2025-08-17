@@ -1,0 +1,14 @@
+[Unit]
+Description=AiMax API (FastAPI)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=dev
+WorkingDirectory=/opt/aimax/api
+ExecStart=/opt/aimax/api/.venv/bin/uvicorn app:app --host 0.0.0.0 --port 8000
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

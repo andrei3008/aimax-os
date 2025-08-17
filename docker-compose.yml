@@ -1,0 +1,14 @@
+services:
+  api:
+    image: python:3.11
+    working_dir: /app
+    volumes: ["./api:/app"]
+    command: bash -lc "pip install -r requirements.txt && uvicorn app:app --host 0.0.0.0 --port 8000 --reload"
+    ports: ["8000:8000"]
+
+  ui:
+    image: node:20
+    working_dir: /app
+    volumes: ["./ui/aimax-ui:/app"]
+    command: bash -lc "npm i -g pnpm && pnpm i && pnpm dev --host"
+    ports: ["5173:5173"]

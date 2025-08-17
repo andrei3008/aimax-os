@@ -1,0 +1,12 @@
+[Unit]
+Description=AiMax OS First Boot Wizard
+After=graphical.target
+
+[Service]
+Type=oneshot
+User=dev
+Environment=HOME=/home/dev
+ExecStart=/opt/aimax/firstboot/wizard.sh
+
+[Install]
+WantedBy=graphical.target
