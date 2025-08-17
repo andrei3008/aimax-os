@@ -4,6 +4,10 @@ services:
     working_dir: /app
     volumes: ["./api:/app"]
     command: bash -lc "pip install -r requirements.txt && uvicorn app:app --host 0.0.0.0 --port 8000 --reload"
+    environment:
+      - OLLAMA_URL=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports: ["8000:8000"]
 
   ui:
